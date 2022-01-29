@@ -24,10 +24,10 @@ app.config.update(
 )
 mail = Mail(app)
 
-if local_server:
-    app.config["SQLALCHEMY_DATABASE_URI"] = params['local_uri']
-else:
-    app.config["SQLALCHEMY_DATABASE_URI"] = "mysql:///the_bannermen_blog.sql"
+# if local_server:
+#     app.config["SQLALCHEMY_DATABASE_URI"] = params['local_uri']
+# else:
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql:///the_bannermen_blog.sql"
 db = SQLAlchemy(app)
 
 
