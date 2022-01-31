@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/contact-bg2.jpg') }}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Contacted People</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <h1>Basic Actions</h1>
+        <div >
+            <a href="/dashboard">  <button class="btn btn-primary">Dashboard Home</button></a>
+            <a href="/logout">  <button class="btn btn-primary"> Log Out </button></a>
+        </div>
+        <hr>
+        <h1>People Who Filled the Form</h1>
+        <table class="table  table-hover">
+            <thead >
+                <tr>
+                    <th scope="col">Sno</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Message</th>
+                    <th scope="col">DateTime</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cont in contacts %}
+                <tr>
+                    <th scope="row">{{cont.sno}}</th>
+                    <td>{{cont.name}}</td>
+                    <td>{{cont.email}}</td>
+                    <td>{{cont.phone_num}}</td>
+                    <td>{{cont.mes}}</td>
+                    <td>{{cont.date}}</td>
+                    <td><a href="/delete_contact/{{cont.sno}}"><button class='btn btn-primary'>Delete</button></a></td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+        
+    </div>
+</div>
+{% endblock %}
