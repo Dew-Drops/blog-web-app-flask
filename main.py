@@ -28,7 +28,9 @@ mail = Mail(app)
 #     app.config["SQLALCHEMY_DATABASE_URI"] = params['local_uri']
 # else:
 #     app.config["SQLALCHEMY_DATABASE_URI"] = params['prod_uri']
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///the_bannermen_blog.sqlite"
+# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///the_bannermen_blog.sqlite"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///the_bannermen_blog.db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] =False 
 db = SQLAlchemy(app)
 
 
