@@ -192,7 +192,7 @@ def contact():
         mail.send_message('New Message from ' + name,
                           sender=email,
                           recipients=[params['gmail-user']],
-                          body=mes+"\n"+phone
+                          body=mes+"\n\n"+email+"\n"+phone
                           )
     return render_template('contact.html', params=params)
 
