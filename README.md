@@ -4,7 +4,7 @@
 It is made using Python-Flask ,MySQL,HTML,CSS,JavaScript, Bootstrap. Here I can post blogs for my users,edit,delete the existing existing posts.I have tried to create beautiful interfaces for users and their access.
 # Tech Stack
 
-**Language :** Python ,HTML ,CSS ,JavaScript ,Bootstrap
+**Language :** Python ,MYSQL ,HTML ,CSS ,JavaScript ,Bootstrap
 
 
 # Screenshots
